@@ -1,0 +1,341 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bungee+Inline');
+
+.top {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.navbar {
+    color: #fff !important;
+    background-color: #000 !important;
+    font-size: 24px;
+    opacity: 0.60;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+    .navbar li {
+        float: left;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none !important;
+        background-color: transparent;
+        font-family: "Amatic SC", sans-serif;
+        line-height: 1.5;
+        color: inherit;
+    }
+
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://www.w3schools.com/w3images/pizza.jpg);
+    min-height: 90%;
+    filter: grayscale(50%);
+    padding: 180px 16px !important;
+}
+
+.display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 20px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.xlarge {
+    font-size: 24px !important;
+}
+
+.tag {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.text-white {
+    font-size: 80px;
+    line-height: 1.5;
+    color: #fff !important;
+    font-family: 'Amatic SC', cursive;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+.xxlarge {
+    font-size: 36px !important;
+}
+
+.btn {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none !important;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Amatic SC', cursive;
+}
+
+.black, .hover-black:hover {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+.container {
+    padding: 0.01em 16px;
+}
+
+.padding-64 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+.container:after, .panel:after, .row:after, .row-padding:after, .topnav:after, .clear:after, .btn-group:after, .btn-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    max-width: 980px;
+    margin: auto;
+}
+
+.jumbo {
+    font-size: 64px !important;
+    font-weight: 400;
+    margin: 10px 0;
+    font-family: 'Amatic SC', cursive;
+}
+
+.pizza1 {
+    display: block;
+}
+
+.starter1 {
+    display: block;
+}
+
+.pasta1 {
+    display: block;
+}
+
+.tab1, .tab2, .tab3 {
+    padding: 20px 112px;
+    font-size: 36px;
+    background-color: black;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+}
+
+    .tab1:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .tab2:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .tab3:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+h1 {
+    font-weight: 400;
+    margin: 10px 0;
+    font-family: 'Amatic SC', cursive;
+    font-size: 36px;
+    margin: 20px;
+}
+
+.pizza1 {
+    color: #000 !important;
+    background-color: #fff !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    font-family: 'Amatic SC', cursive;
+}
+
+.span {
+    border-radius: 4px !important;
+    float: right !important;
+    color: #fff !important;
+    background-color: #616161 !important;
+}
+
+.text {
+    margin: 20px;
+    color: #757575 !important;
+}
+
+.pizza1 hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+.pasta1 {
+    color: #000 !important;
+    background-color: #fff !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    font-family: 'Amatic SC', cursive;
+}
+
+    .pasta1 hr {
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+
+.starter1 {
+    color: #000 !important;
+    background-color: #fff !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    font-family: 'Amatic SC', cursive;
+}
+
+    .starter1 hr {
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+
+.about1 {
+    color: #fff !important;
+    background-color: #f44336 !important;
+    filter: grayscale(75%);
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    padding: 0.01em 50px;
+    font-size: 24px !important;
+    font-family: 'Amatic SC', cursive;
+    line-height: 1.5;
+}
+
+.naslov1 {
+    margin-bottom: 64px;
+    text-align: center !important;
+    font-size: 64px !important;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.strong1 {
+    width: 150px;
+    border-radius: 50% !important;
+    float: right !important;
+    margin-bottom: -5px;
+    border-style: none;
+}
+
+.col.s6 {
+    width: 40%;
+}
+
+.col, .half, .third, .twothird, .threequarter, .quarter {
+    float: left;
+}
+
+.contact1 {
+    color: #fff !important;
+    background-color: #607d8b !important;
+    filter: grayscale(50%);
+    font-family: 'Amatic SC', cursive;
+}
+
+.contact2 {
+    text-align: center !important;
+    font-size: 64px !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+
+.span5 {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    margin: 20px;
+}
+
+.ja {
+    font-size: 36px !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    margin: 40px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.form1 {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    border: 1px solid #ccc !important;
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #808080;
+    width: 90%;
+    margin: 40px;
+}
+
+.button {
+    padding: 8px 16px !important;
+    margin: 40px;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none !important;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 93%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 36px !important;
+}
