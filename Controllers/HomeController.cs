@@ -18,7 +18,8 @@ namespace JustScan.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [HttpGet("{id}")]
+        public IActionResult Index(int id)
         {
             return View();
         }
