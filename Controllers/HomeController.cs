@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using JustScan.Models;
@@ -18,7 +15,8 @@ namespace JustScan.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [HttpGet("{id}")]
+        public IActionResult Index(int id)
         {
             return View();
         }
