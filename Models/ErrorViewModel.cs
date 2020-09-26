@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Configuration;
 using System;
 
 namespace JustScan.Models
@@ -7,5 +8,8 @@ namespace JustScan.Models
         public string RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-    }
+
+
+
+}
 }
