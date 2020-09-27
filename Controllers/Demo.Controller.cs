@@ -14,11 +14,12 @@ namespace JustScan.Controllers
         {
             _iconfiguration = iconfiguration;
         }
+
         public ActionResult Index()
         { 
 
             Database logic = new Database(_iconfiguration);
-            return View(logic.getMenu());
+            return View();
         }
 
        
