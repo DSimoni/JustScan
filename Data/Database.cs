@@ -19,7 +19,6 @@ namespace JustScan.Data
 
         public List<Menu> getMenu(string name)
         {
-            Menu menu = new Menu();
             List<Menu> menus = new List<Menu>();
             string connectionString = _iconfiguration.GetSection("ConnectionStrings").GetSection("ConnectionString").Value;
 
@@ -39,6 +38,7 @@ namespace JustScan.Data
 
                 using (SqlDataReader rdr = cmd.ExecuteReader())
                 {
+                    Menu menu = new Menu();
 
                     while (rdr.Read())
                     {
@@ -57,8 +57,11 @@ namespace JustScan.Data
                     }
                 }
 
-                return menus;
+                sqlCon.Close();
+
             }
+            return menus;
+
         }
     }
 }
