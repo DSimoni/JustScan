@@ -104,16 +104,14 @@
                 <h1 class="center jumbo" style="margin-bottom:64px">MENU</h1>
                 
                 
-                 <div>
+                <div>
 
-                @foreach (Menu menu in Model)
-                {
-                 
-
-                            <button class="tab1" onclick="myFunction1()">@menu.CategoryName</button>
+                    @foreach (Menu menu in Model)
+                    {
+                        <button class="tab1" onclick="myFunction1()">@menu.CategoryName</button>
                     }
-                                             </div>
 
+                </div>
                     
                     <div class="pizza1" style="display:block;">
 

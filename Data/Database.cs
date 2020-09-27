@@ -17,7 +17,7 @@ namespace JustScan.Data
             _iconfiguration = iconfiguration;
         }
 
-        public List<Menu> getMenu()
+        public List<Menu> getMenu(string name)
         {
             Menu menu = new Menu();
             List<Menu> menus = new List<Menu>();
@@ -34,7 +34,7 @@ namespace JustScan.Data
                 cmd.CommandType = CommandType.StoredProcedure;
 
 
-                cmd.Parameters.Add(new SqlParameter("@BusinessID", 1));
+                cmd.Parameters.Add(new SqlParameter("@BusinessName", name));
 
 
                 using (SqlDataReader rdr = cmd.ExecuteReader())
