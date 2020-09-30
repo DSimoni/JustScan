@@ -2,10 +2,10 @@
 
 @{
     Layout = "";
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = @Model.First().BusinessName;
 }
 
-
+<html>
 <head>
     <title>JustScan</title>
     <link rel="stylesheet" href="~/css/menu.css" />
@@ -16,21 +16,31 @@
             text-transform: uppercase;
             font-size: 30px;
         }
- 
+
+        html {
+            min-height: 100%;
+        }
+
+        .footer {
+            position: fixed;
+            text-align: center;
+            bottom: 0px;
+            width: 100%;
+        }  
     </style>
 </head>
 
-<body onload="myFunction()" style="margin:0; border-style: solid;">
+<body onload="myFunction()" style="margin:0;">
 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-    </div>
+    @*<div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>*@
 
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    @*<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>*@
 
     <script type="text/javascript">
         function openNav() {
@@ -59,6 +69,8 @@
         function showPage() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("myDiv").style.display = "block";
+            document.body.style.backgroundImage = "none";
+
         }
 
         function openCategory(j, l) {
@@ -72,7 +84,14 @@
 
                 }
             }
+            location.href = "#menu";
 
+
+
+        }
+
+        function openMenu() {
+            document.getElementById("menu").style.display = "block";
         }
 
 
@@ -82,47 +101,79 @@
     <div id="loader"></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
         <div class="display-middle center">
-            <span class="text-white hide-large hide-medium"><b>Welcome @Model.First().BusinessName</b></span>
+            <span class="text-white hide-large hide-medium" style="color: #000000!important;"><b>@Model.First().BusinessName</b></span>
         </div>
-        <div class="display-bottomleft padding">
-            <span class="tag xlarge">Open from 10am to 12pm</span>
-        </div>
+
         <img src="~/Image/Plate.jpg" style="width:100%" />
 
+        <a id="menubutton" href="#menu" class="tab1" style="font-size:88px;border:3px solid;width:323px;height:150px;border-radius:10%;color:black;background-color:white;" onclick="openMenu()">Menu</a>
 
-        <div class="container black padding-64 xxlarge" id="menu">
-            <div class="content">
+        <br />  <br />   <br />   <br />   <br />
 
-                <h1 class="center jumbo" style="margin-bottom:64px"><b>OUR</b> MENU</h1>
+        <div class="container black padding-64 xxlarge" id="menu" style="display:none; height:105%;">
+            <div class="content;">
 
-
-                <div>
+                <div style="padding-left: 26px;">
 
                     @{
-                    var j = 1;
-                    var i = 1;
-                    var name = "";
+                        var j = 1;
+                        var i = 1;
+                        var name = "";
+                        var subname = "";
+                        var name1 = "";
                     }
-                    
+
 
 
 
 
                     @foreach (Menu menu in Model)
                     {
-                        var cName = "category" + j;
+                        @if (menu.CategoryName != name1)
+                        {
+                            var cName = "category" + j;
 
-                        <button id="@{@cName}" class="tab1" onclick="openCategory(@j,@Model.Select(x=>x.CategoryName).Distinct().Count())">@menu.CategoryName</button>
-                        j++;
+                            <button id="@{@cName}" class="tab1" onclick="openCategory(@j,@Model.Select(x => x.CategoryName).Distinct().Count())">@menu.CategoryName</button>
+                            j++;
+                            name1 = menu.CategoryName;
+                        }
+
                     }
                 </div>
 
+                <br />
                 @foreach (Menu menu1 in Model)
                 {
                     @if (menu1.CategoryName != name)
                     {
                         var fName = "business" + i;
 
+                        @if (i == 1)
+                        {
+                            <div id="@{@fName}" style="display:block;">
+                                @foreach (Menu menu in Model)
+                                {
+
+                                    @if (menu.CategoryName == menu1.CategoryName)
+                                    {
+                                        @if (menu.SubCategoryName != subname && menu.SubCategoryName != menu.CategoryName)
+                                        {
+                                            <h3 style="font-size: larger;text-align:left;background-color:whitesmoke;text-transform: uppercase;">
+                                                @menu.SubCategoryName
+                                            </h3>
+                                        }
+
+                                        <h1 style="font-size: xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
+                                        <p class="text">@menu.Description</p>
+                                        <hr>
+                                    }
+                                    subname = menu.SubCategoryName;
+
+                                }
+
+                            </div>
+
+                        }
                         <div id="@{@fName}" style="display:none;">
 
 
@@ -131,24 +182,31 @@
 
                                 @if (menu.CategoryName == menu1.CategoryName)
                                 {
-
-                                    <h1><b>@menu.Description</b> <span class="span">@menu.Price L</span></h1>
+                                    @if (menu.SubCategoryName != subname && menu.SubCategoryName != menu.CategoryName)
+                                    {
+                                        <h3 style="font-size: larger;text-align:left;background-color:whitesmoke;text-transform:uppercase;">
+                                            @menu.SubCategoryName
+                                        </h3>
+                                    }
+                                    <h1 style="font-size: xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
                                     <p class="text">@menu.Description</p>
                                     <hr>
                                 }
+                                subname = menu.SubCategoryName;
+
 
                             }
 
                         </div>
 
                         i++;
-                        name = menu1.BusinessName;
+                        name = menu1.CategoryName;
 
                     }
                 }
             </div>
         </div>
-
     </div>
-</body>
 
+</body>
+</html>

@@ -6,6 +6,7 @@ using JustScan.Models;
 using Microsoft.Extensions.Configuration;
 using JustScan.Data;
 using System.Linq;
+using System.Web;
 
 namespace JustScan.Controllers
 {
@@ -22,9 +23,17 @@ namespace JustScan.Controllers
 
         }
 
+
+        public IActionResult Index()
+        {
+            return RedirectToAction("privacy", "home");
+
+        }
+
         [HttpGet("{name}")]
         public IActionResult Index(string name)
         {
+            name = HttpUtility.HtmlDecode(name);
             Database logic = new Database(_iconfiguration);
             if (logic.getMenu(name).Count() == 0)
             {
@@ -34,6 +43,7 @@ namespace JustScan.Controllers
             {
                 return View(logic.getMenu(name));
             }
+
         }
 
         public IActionResult Privacy()
