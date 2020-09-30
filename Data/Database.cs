@@ -48,6 +48,7 @@ namespace JustScan.Data
                             BusinessName = rdr["BusinessName"].ToString(),
                             BusinessType = rdr["BusinessType"].ToString(),
                             CategoryName = rdr["CategoryName"].ToString(),
+                            SubCategoryName = rdr["SubCategoryName"].ToString(),
                             Description = rdr["Description"].ToString(),
                             Price = Double.Parse(rdr["Price"].ToString())
 

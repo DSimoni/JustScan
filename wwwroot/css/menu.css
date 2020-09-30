@@ -97,8 +97,8 @@
 }
 
 h1 {
-    color: red;
-    font-size: large;
+    color: black;
+    font-weight: 100;
 }
 
 
@@ -149,8 +149,8 @@ h1 {
 
 #loader {
     position: absolute;
-    left: 50.5%;
-    top: 70%;
+    left: 51.2%;
+    top: 72.7%;
     z-index: 1;
     width: 150px;
     height: 150px;
@@ -370,16 +370,14 @@ strong, b {
 }
 
 .tab1 {
-    padding: 20px 112px;
-    font-size: 47px;
-    /*  background-color: black;
-    color: white;*/
-    font-family: 'Amatic SC', cursive;
-    background-color: #f44336;
-    color: white;
+    padding: 22px 40px;
+    font-size: 39px;
+    font-family: Arial, Helvetica, sans-serif, cursive;
+    background-color: #ffffff;
+    color: #000000;
     border-radius: 8px;
-    border:1px solid black;
-    font-weight:bold;
+    border: 1px solid black;
+    font-weight: bold;
 }
 
     .tab1:hover {
@@ -416,8 +414,7 @@ h1 {
 .span {
     border-radius: 4px !important;
     float: right !important;
-    color: #fff !important;
-    background-color: #616161 !important;
+    color: #616161 !important;
 }
 
 .text {
