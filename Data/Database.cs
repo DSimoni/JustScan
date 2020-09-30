@@ -45,6 +45,7 @@ namespace JustScan.Data
 
                         menu = new Menu()
                         {
+                            BusinessID = rdr["BusinessID"].ToString(),
                             BusinessName = rdr["BusinessName"].ToString(),
                             BusinessType = rdr["BusinessType"].ToString(),
                             CategoryName = rdr["CategoryName"].ToString(),
