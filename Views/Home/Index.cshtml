@@ -104,7 +104,11 @@
             <span class="text-white hide-large hide-medium" style="color: #000000!important;"><b>@Model.First().BusinessName</b></span>
         </div>
 
-        <img src="~/Image/Plate.jpg" style="width:100%" />
+        @{
+            string path = @Model.First().BusinessID + ".jpg";
+        }
+
+        <img src="~/Image/@path" style="width:100%" />
 
         <a id="menubutton" href="#menu" class="tab1" style="font-size:88px;border:3px solid;width:323px;height:150px;border-radius:10%;color:black;background-color:white;" onclick="openMenu()">Menu</a>
 

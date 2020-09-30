@@ -7,6 +7,8 @@ namespace JustScan.Models
 {
     public class Menu
     {
+        public string BusinessID{ get; set; }
+
         public string BusinessType { get; set; }
 
         public string BusinessName { get; set; }
