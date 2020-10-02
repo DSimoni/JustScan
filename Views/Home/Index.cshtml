@@ -21,26 +21,12 @@
             min-height: 100%;
         }
 
-        .footer {
-            position: fixed;
-            text-align: center;
-            bottom: 0px;
-            width: 100%;
-        }  
+
     </style>
 </head>
 
-<body onload="myFunction()" style="margin:0;">
+<body onload="myFunction()">
 
-    @*<div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>*@
-
-    @*<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>*@
 
     <script type="text/javascript">
         function openNav() {
@@ -53,7 +39,6 @@
     </script>
 
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
     <script type="text/javascript">
         var myVar;
@@ -99,7 +84,7 @@
 
 
     <div id="loader"></div>
-    <div style="display:none;" id="myDiv" class="animate-bottom">
+    <div style="display:none;" id="myDiv">
         <div class="display-middle center">
             <span class="text-white hide-large hide-medium" style="color: #000000!important;"><b>@Model.First().BusinessName</b></span>
         </div>
@@ -110,11 +95,10 @@
 
         <img src="~/Image/@path" style="width:100%" />
 
-        <a id="menubutton" href="#menu" class="tab1" style="font-size:88px;border:3px solid;width:323px;height:150px;border-radius:10%;color:black;background-color:white;" onclick="openMenu()">Menu</a>
+        <a id="menubutton" href="#menu" class="tab1" style="font-size:88px;border:3px solid;width:323px;height:150px;border-radius:10%;color:black;background-color:white;" onclick="openMenu()">MENU</a>
 
-        <br />  <br />   <br />   <br />   <br />
 
-        <div class="container black padding-64 xxlarge" id="menu" style="display:none; height:105%;">
+        <div class="container black padding-64 xxlarge" id="menu" style="display:none; height:105%;margin-top:600px;">
             <div class="content;">
 
                 <div style="padding-left: 26px;">

@@ -18,7 +18,7 @@ namespace JustScan.Controllers
         public ActionResult Index()
         { 
 
-            Database logic = new Database(_iconfiguration);
+            DataAccess logic = new DataAccess(_iconfiguration);
             return View();
         }
 
