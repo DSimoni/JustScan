@@ -34,7 +34,7 @@ namespace JustScan.Controllers
         public IActionResult Index(string name)
         {
             name = HttpUtility.HtmlDecode(name);
-            Database logic = new Database(_iconfiguration);
+            DataAccess logic = new DataAccess(_iconfiguration);
             if (logic.getMenu(name).Count() == 0)
             {
                 return RedirectToAction("privacy","home");

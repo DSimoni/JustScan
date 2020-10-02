@@ -1,7 +1,7 @@
 ﻿{
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:55996",
       "sslPort": 44384
@@ -25,3 +25,34 @@
     }
   }
 }
+
+
+//{
+//  "iisSettings": {
+//    "windowsAuthentication": false,
+//    "anonymousAuthentication": true,
+//    "iisExpress": {
+//      "applicationUrl": "http://justscan.al",
+//      "sslPort": 44384
+//    }
+//  },
+//  "profiles": {
+//    "IIS Express": {
+//      "commandName": "IISExpress",
+//      "launchBrowser": true,
+//      "launchUrl": "www.justscan.al",
+//      "environmentVariables": {
+//        "Key": "Value",
+//        "ASPNETCORE_ENVIRONMENT": "Production"
+//      }
+//    },
+//    "JustScan": {
+//      "commandName": "Project",
+//      "launchBrowser": true,
+//      "environmentVariables": {
+//        "ASPNETCORE_ENVIRONMENT": "Production"
+//      },
+//      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+//    }
+//  }
+//}
