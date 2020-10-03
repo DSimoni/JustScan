@@ -7,12 +7,12 @@ using System.Data.SqlClient;
 
 namespace JustScan.Data
 {
-    public class Database
+    public class DataAccess
     {
         IConfiguration _iconfiguration;
 
 
-        public Database(IConfiguration iconfiguration)
+        public DataAccess(IConfiguration iconfiguration)
         {
             _iconfiguration = iconfiguration;
         }
