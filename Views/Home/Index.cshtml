@@ -9,9 +9,11 @@
 <head>
     <title>JustScan</title>
     <link rel="stylesheet" href="~/css/menu.css" />
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet">
+
     <style>
         p, h1, button {
-            font-family: Tahoma;
+            font-family: 'Schoolbell', arial, serif;
             text-align: left;
             text-transform: uppercase;
             font-size: 30px;
@@ -20,8 +22,6 @@
         html {
             min-height: 100%;
         }
-
-
     </style>
 </head>
 
@@ -151,8 +151,8 @@
                                             </h3>
                                         }
 
-                                        <h1 style="font-size: xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
-                                        <p class="text">@menu.Description</p>
+                                        <h1 style="font-size:xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
+                                        <p class="text" style="font-family:'Bell MT';text-transform: lowercase;">@menu.MetaDescription</p>
                                         <hr>
                                     }
                                     subname = menu.SubCategoryName;
@@ -177,7 +177,7 @@
                                         </h3>
                                     }
                                     <h1 style="font-size: xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
-                                    <p class="text">@menu.Description</p>
+                                    <p class="text" style="font-family:'Bell MT';text-transform: lowercase;">@menu.MetaDescription</p>
                                     <hr>
                                 }
                                 subname = menu.SubCategoryName;
