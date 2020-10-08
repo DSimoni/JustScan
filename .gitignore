@@ -1,12 +1,4 @@
-*/bin/Debug
-*/bin/Release
-*/obj/Debug
-*/obj/Release
-*.suo
-*.user
-*.ncb
-.vs/JustScan/config/applicationhost.config
-.vs/JustScan/DesignTimeBuild/.dtbcache.v2
-obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
-obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
-obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+*.exe
+*.pdb
+*.manifest
+*.cache
