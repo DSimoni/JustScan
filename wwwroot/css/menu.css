@@ -38,12 +38,13 @@
 /* Caption text */
 .text {
     color: #f2f2f2;
-    font-size: 0px;
-    padding: 8px 12px;
-    position: absolute;
+    font-size: 30px;
+    padding: 8px 20px;
+    position: relative;
     bottom: 8px;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    margin-bottom: -18px;
 }
 /* Number text (1/3 etc) */
 .numbertext {
@@ -421,8 +422,8 @@ h1 {
 }
 
 .text {
-    margin: 20px;
-    color: #757575 !important;
+/*    margin: 20px;
+*/    color: #757575 !important;
 }
 
 .pizza1 hr {

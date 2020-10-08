@@ -5,19 +5,14 @@
   
 
 
-@* <img src="~/Image/Scan.jpg" style="width:100%" /> *@
-
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Moonlight CSS Website Template</title>
-<!-- 
-Moonlight Template 
-https://templatemo.com/tm-512-moonlight
--->
+        <title>Just Scan</title>
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="~/apple-touch-icon.png">
@@ -45,35 +40,36 @@ https://templatemo.com/tm-512-moonlight
     
   
         <nav>
-          <div class="logo">
-              <img src="~/Home/img/logo.png" alt="">
-          </div>
+            <div class="logo">
+                <img src="~/Home/img/name-logo.png" width='50%' alt=""/>
+            </div>
           <div class="mini-logo">
               <img src="~/Home/img/mini_logo.png" alt="">
           </div>
           <ul>
             <li><a href="#1"><i class="fa fa-home"></i> <em>Home</em></a></li>
             <li><a href="#2"><i class="fa fa-user"></i> <em>About</em></a></li>
-            <li><a href="#3"><i class="fa fa-pencil"></i> <em>Entries</em></a></li>
-            <li><a href="#4"><i class="fa fa-image"></i> <em>Work</em></a></li>
-            <li><a href="#5"><i class="fa fa-envelope"></i> <em>Contact</em></a></li>
+            <li><a href="#3"><i class="fa fa-pencil"></i> <em>Dobitë</em></a></li>
+            <li><a href="#4"><i class="fa fa-image"></i> <em>Klientët</em></a></li>
+            <li><a href="#5"><i class="fa fa-envelope"></i> <em>Kontakt</em></a></li>
           </ul>
         </nav>
         
         <div class="slides">
           <div class="slide" id="1">
             <div class="content first-content">
-              <div class="container-fluid">
-                  <div class="col-md-3">
-                      <div class="author-image"><img src="~/Home/img/author_image.png" alt="Author Image"></div>
-                  </div>
-                  <div class="col-md-9">
-                      <h2>Mingalar par</h2>
-                      <p>Please take a look at <strong><a rel="nofollow" href="https://www.toocss.com">Too CSS</a></strong> to see free template collections for you. Lorem ipsum <em>dolor sit amet</em>, consectetur adipiscing elit. <em>Sed vehicula blandit augue,</em> eu maximus odio tempus vitae.</p>
-                      <div class="main-btn"><a href="#2">Read More</a></div>
-                      <div class="fb-btn"><a rel="nofollow" href="https://fb.com/templatemo">Our FB Page</a></div>
-                  </div>
-              </div>
+                <div class="container-fluid">
+                    <div class="col-md-3">
+                        <div class="author-image"><img src="~/Image/Scan.jpg"  alt="Logo Image" />
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2>Just Scan</h2>
+                        <p>Mirë se vini në portalin tonë, dixhitalizoni biznesin tuaj dhe përfitoni nga avantazhet që bota e internetit na ofron çdo ditë.Mos prisni dhe mbështetuni tek ne për të modernizuar dhe lehtësuar punën tuaj.</p>
+                        <div class="main-btn"><a href="#2">Lexo</a></div>
+                        <div class="fb-btn"><a rel="nofollow" href="https://www.instagram.com/justscan.al/">Our IG Page</a></div>
+                    </div>
+                </div>
             </div>
           </div>
           <div class="slide" id="2">
@@ -342,35 +338,35 @@ https://templatemo.com/tm-512-moonlight
             3. Click "Share" and choose "Embed map" tab
             4. Copy only URL and paste it within the src="" field below
 	-->
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=adi%20profesional+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <form id="contact" action="" method="post">
+                        <form id="contact" action="/Home/SendEmail" method="post">
                             <div class="row">
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Emri Juaj..." required="">
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email-i Juaj..." required="">
                                   </fieldset>
                                 </div>
                                  <div class="col-md-12">
                                   <fieldset>
-                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subjekti..." required="">
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Mesazhi Juaj..." required=""></textarea>
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">Send Now</button>
+                                      <button type="submit" id="form-submit" class="btn">Dërgo Tani</button>
                                   </fieldset>
                                 </div>
                             </div>
