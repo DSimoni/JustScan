@@ -19,6 +19,9 @@ namespace JustScan.Models
 
         public string Description { get; set; }
 
+        public string MetaDescription { get; set; }
+
+
         public double Price { get; set; }
 
 
