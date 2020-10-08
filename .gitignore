@@ -2,5 +2,5 @@
 *.pdb
 *.manifest
 *.cache
-bin/
-obj/
+/bin
+/obj
