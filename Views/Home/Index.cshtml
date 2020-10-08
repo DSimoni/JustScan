@@ -1,0 +1,200 @@
+﻿@model List<JustScan.Models.Menu>
+
+@{
+    Layout = "";
+    ViewData["Title"] = @Model.First().BusinessName;
+}
+
+<html>
+<head>
+    <title>JustScan</title>
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet">
+
+    <style>
+        p, h1, button {
+            font-family: 'Schoolbell', arial, serif;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+
+        html {
+            min-height: 100%;
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
+
+    <script type="text/javascript">
+        var myVar;
+
+        function myFunction() {
+
+            document.body.style.backgroundImage = "url('../Image/Scan.jpg')";
+            document.body.style.backgroundSize = "100% 100%";
+
+            myVar = setTimeout(showPage, 1500);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+            document.body.style.backgroundImage = "none";
+
+        }
+
+        function openCategory(j, l) {
+
+            for (var i = 1; i <= l; i++) {
+                if (i == j) {
+                    document.getElementById("business" + i).style.display = "block";
+                }
+                else {
+                    document.getElementById("business" + i).style.display = "none";
+
+                }
+            }
+            location.href = "#menu";
+
+
+
+        }
+
+        function openMenu() {
+            document.getElementById("menu").style.display = "block";
+        }
+
+
+    </script>
+
+
+    <div id="loader"></div>
+    <div style="display:none;" id="myDiv">
+        <div class="display-middle center">
+            <span class="text-white hide-large hide-medium" style="color: #000000!important;"><b>@Model.First().BusinessName</b></span>
+        </div>
+
+        @{
+            string path = @Model.First().BusinessID + ".jpg";
+        }
+
+        <img src="~/Image/@path" style="width:100%" />
+
+        <a id="menubutton" href="#menu" class="tab1" style="font-size:88px;border:3px solid;width:323px;height:150px;border-radius:10%;color:black;background-color:white;" onclick="openMenu()">MENU</a>
+
+
+        <div class="container black padding-64 xxlarge" id="menu" style="display:none; height:105%;margin-top:600px;">
+            <div class="content;">
+
+                <div style="padding-left: 26px;">
+
+                    @{
+                        var j = 1;
+                        var i = 1;
+                        var name = "";
+                        var subname = "";
+                        var name1 = "";
+                    }
+
+
+
+
+
+                    @foreach (Menu menu in Model)
+                    {
+                        @if (menu.CategoryName != name1)
+                        {
+                            var cName = "category" + j;
+
+                            <button id="@{@cName}" class="tab1" onclick="openCategory(@j,@Model.Select(x => x.CategoryName).Distinct().Count())">@menu.CategoryName</button>
+                            j++;
+                            name1 = menu.CategoryName;
+                        }
+
+                    }
+                </div>
+
+                <br />
+                @foreach (Menu menu1 in Model)
+                {
+                    @if (menu1.CategoryName != name)
+                    {
+                        var fName = "business" + i;
+
+                        @if (i == 1)
+                        {
+                            <div id="@{@fName}" style="display:block;">
+                                @foreach (Menu menu in Model)
+                                {
+
+                                    @if (menu.CategoryName == menu1.CategoryName)
+                                    {
+                                        @if (menu.SubCategoryName != subname && menu.SubCategoryName != menu.CategoryName)
+                                        {
+                                            <h3 style="font-size: larger;text-align:left;background-color:whitesmoke;text-transform: uppercase;">
+                                                @menu.SubCategoryName
+                                            </h3>
+                                        }
+
+                                        <h1 style="font-size:xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
+                                        <p class="text" style="font-family:'Bell MT';text-transform: lowercase;">@menu.MetaDescription</p>
+                                        <hr>
+                                    }
+                                    subname = menu.SubCategoryName;
+
+                                }
+
+                            </div>
+
+                        }
+                        <div id="@{@fName}" style="display:none;">
+
+
+                            @foreach (Menu menu in Model)
+                            {
+
+                                @if (menu.CategoryName == menu1.CategoryName)
+                                {
+                                    @if (menu.SubCategoryName != subname && menu.SubCategoryName != menu.CategoryName)
+                                    {
+                                        <h3 style="font-size: larger;text-align:left;background-color:whitesmoke;text-transform:uppercase;">
+                                            @menu.SubCategoryName
+                                        </h3>
+                                    }
+                                    <h1 style="font-size: xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
+                                    <p class="text" style="font-family:'Bell MT';text-transform: lowercase;">@menu.MetaDescription</p>
+                                    <hr>
+                                }
+                                subname = menu.SubCategoryName;
+
+
+                            }
+
+                        </div>
+
+                        i++;
+                        name = menu1.CategoryName;
+
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,572 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bungee+Inline');
+* {
+    box-sizing: border-box
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: blue;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+h1 {
+    color: black;
+    font-weight: 100;
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+#loader {
+    position: absolute;
+    left: 51.2%;
+    top: 72.7%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#myDiv {
+    display: none;
+    text-align: center;
+}
+
+.top {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.navbar {
+    color: #fff !important;
+    background-color: #000 !important;
+    font-size: 24px;
+    opacity: 0.60;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+    .navbar li {
+        float: left;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none !important;
+        background-color: transparent;
+        font-family: "Amatic SC", sans-serif;
+        line-height: 1.5;
+        color: inherit;
+    }
+
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    /*    background-image: url("../Image/WhitBack.png");
+*/ min-height: 50%;
+    filter: grayscale(50%);
+    padding: 180px 16px !important;
+}
+
+.display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 20px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.xlarge {
+    font-size: 24px !important;
+}
+
+.tag {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.text-white {
+    font-size: 100px;
+    line-height: 1.5;
+    color: red !important;
+    font-family: 'Times New Roman', Times, serif, cursive;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+.xxlarge {
+    font-size: 36px !important;
+}
+
+.btn {
+    border: 3px solid;
+    display: list-item;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none !important;
+    color: #000000;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Times New Roman', cursive;
+    border-radius: 88px;
+    width: 350px;
+}
+
+.black, .hover-black:hover {
+    color: black !important;
+    background-color: white !important;
+}
+
+.container {
+    padding: 0.01em 16px;
+}
+
+.padding-64 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+.container:after, .panel:after, .row:after, .row-padding:after, .topnav:after, .clear:after, .btn-group:after, .btn-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    max-width: 980px;
+    margin: auto;
+}
+
+.jumbo {
+    font-size: 64px !important;
+    font-weight: 400;
+    margin: 10px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+
+.pizza1 {
+    display: block;
+}
+
+.starter1 {
+    display: block;
+}
+
+.pasta1 {
+    display: block;
+}
+
+.tab1 {
+    padding: 22px 40px;
+    font-size: 39px;
+    font-family: Arial, Helvetica, sans-serif, cursive;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+    .tab1:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .tab2:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .tab3:hover {
+        background-color: #f44336;
+        color: #f44336;
+    }
+
+h1 {
+    font-weight: 400;
+    margin: 10px 0;
+    font-family: 'Times New Roman', cursive;
+    font-size: 36px;
+    margin: 20px;
+}
+
+.pizza1 {
+    color: #000 !important;
+    background-color: #fff !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    font-family: 'Amatic SC', cursive;
+}
+
+.span {
+    border-radius: 4px !important;
+    float: right !important;
+    color: #616161 !important;
+}
+
+.text {
+    margin: 20px;
+    color: #757575 !important;
+}
+
+.pizza1 hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+.pasta1 {
+    color: #000 !important;
+    background-color: #fff !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    font-family: 'Amatic SC', cursive;
+}
+
+    .pasta1 hr {
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+
+.starter1 {
+    color: #000 !important;
+    background-color: #fff !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+    font-family: 'Amatic SC', cursive;
+}
+
+    .starter1 hr {
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+
+.about1 {
+    color: #fff !important;
+    background-color: #f44336 !important;
+    filter: grayscale(75%);
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    padding: 0.01em 50px;
+    font-size: 24px !important;
+    font-family: 'Amatic SC', cursive;
+    line-height: 1.5;
+}
+
+.naslov1 {
+    margin-bottom: 64px;
+    text-align: center !important;
+    font-size: 64px !important;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.strong1 {
+    width: 150px;
+    border-radius: 50% !important;
+    float: right !important;
+    margin-bottom: -5px;
+    border-style: none;
+}
+
+.col.s6 {
+    width: 40%;
+}
+
+.col, .half, .third, .twothird, .threequarter, .quarter {
+    float: left;
+}
+
+.contact1 {
+    color: #000000 !important;
+    background-color: #fff !important;
+    filter: grayscale(50%);
+    font-family: 'Times New Roman', cursive;
+}
+
+.contact2 {
+    text-align: center !important;
+    font-size: 64px !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    font-weight:bold;
+}
+
+
+.span5 {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    margin: 20px;
+}
+
+.ja {
+    font-size: 36px !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    margin: 40px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.form1 {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    border: 1px solid #ccc !important;
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #808080;
+    width: 90%;
+    margin: 40px;
+}
+
+.button {
+    padding: 8px 16px !important;
+    margin: 40px;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none !important;
+    color: #fff;
+    background-color: #f44336;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 93%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 36px !important;
+}
