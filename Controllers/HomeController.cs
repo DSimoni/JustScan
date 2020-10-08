@@ -10,6 +10,7 @@ using System.Web;
 
 namespace JustScan.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -26,7 +27,7 @@ namespace JustScan.Controllers
 
         public IActionResult Index()
         {
-            return RedirectToAction("privacy", "home");
+            return RedirectToAction("Privacy", "home");
 
         }
 
@@ -37,7 +38,7 @@ namespace JustScan.Controllers
             DataAccess logic = new DataAccess(_iconfiguration);
             if (logic.getMenu(name).Count() == 0)
             {
-                return RedirectToAction("privacy","home");
+                return RedirectToAction("Privacy", "home");
             }
             else
             {
