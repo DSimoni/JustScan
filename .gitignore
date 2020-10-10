@@ -493,3 +493,5 @@ obj/Debug/netcoreapp3.1/win-x86/Razor/Views/Shared/_Layout.cshtml.g.cs
 obj/Debug/netcoreapp3.1/win-x86/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 obj/Debug/netcoreapp3.1/win-x86/Razor/Views/Shared/Error.cshtml.g.cs
 obj/Debug/netcoreapp3.1/win-x86/staticwebassets/JustScan.StaticWebAssets.xml
+.vs/JustScan/DesignTimeBuild/.dtbcache.v2
+.vs/JustScan/v16/.suo
