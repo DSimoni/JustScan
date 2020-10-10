@@ -45,12 +45,14 @@ namespace JustScan.Data
 
                         menu = new Menu()
                         {
-                            BusinessID = rdr["BusinessID"].ToString(),
+                            BusinessID = Int32.Parse(rdr["BusinessID"].ToString()),
                             BusinessName = rdr["BusinessName"].ToString(),
                             BusinessType = rdr["BusinessType"].ToString(),
+                            ImageID = Int32.Parse(rdr["ImageID"].ToString()),
                             CategoryName = rdr["CategoryName"].ToString(),
                             SubCategoryName = rdr["SubCategoryName"].ToString(),
                             Description = rdr["Description"].ToString(),
+                            MetaDescription = rdr["MetaDescription"].ToString(),
                             Price = Double.Parse(rdr["Price"].ToString())
 
                         };

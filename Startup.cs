@@ -47,7 +47,15 @@ namespace JustScan
 
             app.UseRouting();
 
+
             app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(name: "blog",
+                pattern: "",
+                defaults: new { controller = "Home", action = "Privacy" });
+            });
 
             app.UseEndpoints(endpoints =>
             {
@@ -55,6 +63,8 @@ namespace JustScan
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+       
         }
     }
 }
