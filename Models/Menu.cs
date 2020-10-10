@@ -7,11 +7,13 @@ namespace JustScan.Models
 {
     public class Menu
     {
-        public string BusinessID{ get; set; }
+        public Int32 BusinessID{ get; set; }
 
         public string BusinessType { get; set; }
 
         public string BusinessName { get; set; }
+
+        public Int32 ImageID { get; set; }
 
         public string CategoryName { get; set; }
 

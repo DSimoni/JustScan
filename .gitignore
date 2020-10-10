@@ -4,3 +4,6 @@
 *.cache
 **/[Bb]in/*
 !**/[Bb]in/*.refresh
+.vs/JustScan/config/applicationhost.config
+.vs/JustScan/DesignTimeBuild/.dtbcache.v2
+.vs/JustScan/v16/.suo
