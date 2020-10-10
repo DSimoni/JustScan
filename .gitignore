@@ -4,4 +4,3 @@
 *.cache
 **/[Bb]in/*
 !**/[Bb]in/*.refresh
-bin/Release/netcoreapp3.1/appsettings.Development.json
