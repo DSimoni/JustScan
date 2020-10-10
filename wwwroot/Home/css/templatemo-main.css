@@ -353,11 +353,11 @@ nav a:hover::before {
 
 .first-content p {
 	color: #fff;
-	font-size: 13px;
+	font-size: 12px;
 	text-transform: uppercase;
 	font-weight: 300;
 	letter-spacing: 2px;
-	line-height: 26px;
+	line-height: 17px;
 	margin-bottom: 20px;
 }
 
@@ -695,7 +695,7 @@ nav a:hover::before {
 }
 
 .footer .content {
-	left: 30%;
+	left: 15%;
 	width: 70%;
 	max-width: 70%;
 	position: absolute;
@@ -732,7 +732,7 @@ nav a:hover::before {
 	}
 
 	.first-content .author-image img {
-		max-width: 195px;
+		max-width: 100px;
 		float: none;
 		margin-right: 0px;
 		margin-bottom: 30px;
