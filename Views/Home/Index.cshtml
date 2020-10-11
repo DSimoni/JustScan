@@ -150,12 +150,22 @@
 
                 @{
                     string path1 = "";
+                    string curreny = "";
                 }
 
 
                 @foreach (Menu menu1 in Model)
                 {
                     path1 = menu1.ImageID + ".jpg";
+
+                    @if (menu1.BusinessID == 1)
+                    {
+                        curreny = "€";
+                    }
+
+                    else {
+ curreny = "L";
+                    }
 
                     @if (menu1.CategoryName != name)
                     {
@@ -183,7 +193,7 @@
                                             </h3>
                                         }
 
-                                        <h1 style="font-size:xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
+                                        <h1 style="font-size:xx-large;">@menu.Description <span class="span">@menu.Price @curreny</span></h1>
                                         <p class="text" style="font-family:'Bell MT';text-transform: lowercase;">@menu.MetaDescription</p>
                                         <hr>
                                     }
@@ -213,7 +223,7 @@
                                             @menu.SubCategoryName
                                         </h3>
                                     }
-                                    <h1 style="font-size: xx-large;">@menu.Description <span class="span">@menu.Price €</span></h1>
+                                    <h1 style="font-size: xx-large;">@menu.Description <span class="span">@menu.Price @curreny</span></h1>
                                     <p class="text" style="font-family:'Bell MT';text-transform: lowercase;">@menu.MetaDescription</p>
                                     <hr>
                                 }
