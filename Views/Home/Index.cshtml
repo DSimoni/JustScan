@@ -101,7 +101,7 @@
     <div id="loader"></div>
     <div style="display:none;" id="myDiv">
         <div class="display-middle center">
-            <span class="text-white hide-large hide-medium" style="color: #000000!important;"><b>@Model.First().BusinessName</b></span>
+            <span class="text-white hide-large hide-medium" style="color: #000000!important; text-transform: uppercase;"><b>@Model.First().BusinessName</b></span>
         </div>
 
         @{
@@ -181,7 +181,7 @@
                             <div id="@{@fName}" style="display:block;">
 
                                 <br /> <br />
-                                <img src="~/Image/Category_Image/@path1?uploadTime=1" class="responsive" alt="Foto" />
+                                <img src="~/Image/Category_Image/@path1?uploadTime=2" class="responsive" alt="Foto" />
 
 
                                 @foreach (Menu menu in Model)
@@ -189,7 +189,7 @@
 
                                     @if (menu.CategoryName == menu1.CategoryName)
                                     {
-                                        @if (menu.SubCategoryName != subname && menu.SubCategoryName != menu.CategoryName)
+                                        @if (menu.SubCategoryName != subname )
                                         {
 
                                             <h3 style="font-size: larger;text-align:left;background-color:whitesmoke;text-transform: uppercase;">
@@ -211,7 +211,7 @@
                         <div id="@{@fName}" style="display:none;">
 
                             <br /><br />
-                            <img src="~/Image/Category_Image/@path1?uploadTime=1" class="responsive" alt="Foto" />
+                            <img src="~/Image/Category_Image/@path1?uploadTime=2" class="responsive" alt="Foto" />
 
 
                             @foreach (Menu menu in Model)
@@ -220,7 +220,7 @@
 
                                 @if (menu.CategoryName == menu1.CategoryName)
                                 {
-                                    @if (menu.SubCategoryName != subname && menu.SubCategoryName != menu.CategoryName)
+                                    @if (menu.SubCategoryName != subname )
                                     {
 
                                         <h3 style="font-size: larger;text-align:left;background-color:whitesmoke;text-transform:uppercase;">
