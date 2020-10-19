@@ -34,6 +34,7 @@ namespace JustScan.Controllers
         [HttpGet("{name}")]
         public IActionResult Index(string name)
         {
+            
             name = HttpUtility.HtmlDecode(name);
             DataAccess logic = new DataAccess(_iconfiguration);
             if (logic.getMenu(name).Count() == 0)
