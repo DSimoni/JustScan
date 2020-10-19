@@ -13,6 +13,8 @@ namespace JustScan.Models
 
         public string BusinessName { get; set; }
 
+        public string BusinessLanguage { get; set; }
+
         public Int32 ImageID { get; set; }
 
         public string CategoryName { get; set; }
