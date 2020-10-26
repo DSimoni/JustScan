@@ -41,6 +41,7 @@
         div,
         button {
         background-image: url('../Image/bgImage/@bgImg');
+        font-family: Arial, Helvetica, sans-serif;
         }
 
 
@@ -57,6 +58,7 @@
 </head>
 
 <body onload="myFunction()">
+        <partial name="\_LoginPartial" />
 
 
     <script type="text/javascript">
@@ -104,16 +106,17 @@
             for (var i = 1; i <= l; i++) {
                 if (i == j) {
                     document.getElementById("business" + i).style.display = "block";
-                    document.getElementsByClassName("tab1")[i].style.color = "#f44336";
-                    document.getElementsByClassName("tab1")[i].style.borderColor = "#f44336";
+                    document.getElementById("category" + i).style.color = "#f44336";
+                    document.getElementById("category" + i).style.borderColor = "#f44336";
 
 
                 }
                 else {
                     document.getElementById("business" + i).style.display = "none";
-                    document.getElementsByClassName("tab1")[i].style.color = "#000000";
-                    document.getElementsByClassName("tab1")[i].style.borderColor = "#000000";
+                    document.getElementById("category" + i).style.color = "#000000";
+                    document.getElementById("category" + i).style.borderColor = "#000000";
                 }
+
             }
 
             location.href = "#menu";
@@ -182,14 +185,14 @@
                         @if (item == "al")
                         {
                             <a id="menubutton" href="#menu" class="tab1"
-                               style="font-size: 30px; border: 3px solid; width: 100px; height: 75px; border-radius: 10%; color: black; background-color: white;"
-                               onclick="openMenu('_@item')">MENU SHQIP</a>
+                               style="font-size: 30px; border: 3px solid; width: 100px; height: 75px; border-radius: 10%; color: black;"
+                               onclick="openMenu('_@item')">MENU SHQIP </a>
                         }
                         else
                         {
                             <a id="menubutton" href="#menu" class="tab1"
-                               style="font-size: 30px; border: 3px solid; width: 100px; height: 75px; border-radius: 10%; color: black; background-color: white;"
-                               onclick="openMenu('_@item')">MENU ANGLISHT</a>
+                               style="font-size: 30px; border: 3px solid; width: 100px; height: 75px; border-radius: 10%; color: black;"
+                               onclick="openMenu('_@item')">ENGLISH MENU</a>
                         }
                     }
                 }
@@ -265,7 +268,7 @@
 
                                 <br /> <br />
 
-                                <img src="~/Image/Category_Image/@path1?uploadTime=2" class="responsive" alt="Foto" />
+                                @* <img src="~/Image/Category_Image/@path1?uploadTime=2" class="responsive" alt="Foto" /> *@
 
                                 @foreach (Menu menu in Model)
                                 {
@@ -294,7 +297,7 @@
 
                             <br /><br />
 
-                            <img src="~/Image/Category_Image/@path1?uploadTime=2" class="responsive" alt="Foto" />
+                            @* <img src="~/Image/Category_Image/@path1?uploadTime=2" class="responsive" alt="Foto" /> *@
 
                             @foreach (Menu menu in Model)
                             {
